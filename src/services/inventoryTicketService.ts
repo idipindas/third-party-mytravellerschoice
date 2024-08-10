@@ -1,11 +1,10 @@
 import axios from "axios";
-import { BASE_URL } from "../config/parmarConfig";
 
 export const inventoryTicketService = ()=>{
     const inventoryGetAgentDetailsService = async(data:any)=>{
         try{
 
-            const resp = await axios.get(`${BASE_URL}/getAgentDetails`,data)
+            const resp = await axios.get(`${process.env.PARMAR_URL}/getAgentDetails`,data)
             return resp
         }catch(error:any){
             console.log(error);
@@ -16,7 +15,7 @@ export const inventoryTicketService = ()=>{
     const inventoryGetAttractionListService = async(data:any)=>{
         try{
 
-            const resp = await axios.get(`${BASE_URL}/getAttractionList`,data)
+            const resp = await axios.get(`${process.env.PARMAR_URL}/getAttractionList`,data)
             return resp
         }catch(error:any){
             console.log(error);
@@ -27,7 +26,7 @@ export const inventoryTicketService = ()=>{
     const inventoryGetPriceForTicketTypeService = async(data:any)=>{
         try{
 
-            const resp = await axios.get(`${BASE_URL}/getPriceForTicketType`,data)
+            const resp = await axios.get(`${process.env.PARMAR_URL}/getPriceForTicketType`,data)
             return resp
         }catch(error:any){
             console.log(error);
@@ -38,7 +37,7 @@ export const inventoryTicketService = ()=>{
     const inventoryConfirmBookingService = async(data:any)=>{
         try{
 
-            const resp = await axios.post(`${BASE_URL}/confirmBooking`,data)
+            const resp = await axios.post(`${process.env.PARMAR_URL}/confirmBooking`,data)
             return resp
         }catch(error:any){
             console.log(error);

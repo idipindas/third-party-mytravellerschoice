@@ -1,5 +1,4 @@
 import axios from "axios";
-import { BASE_URL } from "../config/parmarConfig";
 
 export const apiTicketService = ()=>{
 
@@ -23,10 +22,10 @@ export const apiTicketService = ()=>{
         }
 
     }
-const apiGetAttractionListServices =(data:any)=>{
+const apiGetAttractionListServices =async(data:any)=>{
     try{
         
-        const resp = axios.post(`${BASE_URL}/getAttractionList`,data)
+        const resp = await axios.post(`${process.env.PARMAR_URL}/getAttractionList`,data)
         return resp
     }catch(error:any)
     {
@@ -35,10 +34,10 @@ const apiGetAttractionListServices =(data:any)=>{
         throw new error;
     }
 }
-const apiGetTimeSlotListServices =(data:any)=>{
+const apiGetTimeSlotListServices =async(data:any)=>{
     try{
         
-        const resp = axios.post(`${BASE_URL}/getTimeSlotList`,data)
+        const resp = await axios.post(`${process.env.PARMAR_URL}/getTimeSlotList`,data)
         return resp
     }catch(error:any)
     {
@@ -48,10 +47,10 @@ const apiGetTimeSlotListServices =(data:any)=>{
     }
 }
 
-const apiGetPriceForTicketTypeServices =(data:any)=>{
+const apiGetPriceForTicketTypeServices =async(data:any)=>{
     try{
         
-        const resp = axios.post(`${BASE_URL}/getPriceForTicketType`,data)
+        const resp = await axios.post(`${process.env.PARMAR_URL}/getPriceForTicketType`,data)
         return resp
     }catch(error:any)
     {
@@ -60,10 +59,10 @@ const apiGetPriceForTicketTypeServices =(data:any)=>{
         throw new error;
     }
 }
-const apiSaveBookingServices =(data:any)=>{
+const apiSaveBookingServices =async(data:any)=>{
     try{
         
-        const resp = axios.post(`${BASE_URL}/saveBooking`,data)
+        const resp = await axios.post(`${process.env.PARMAR_URL}/saveBooking`,data)
         return resp
     }catch(error:any)
     {
@@ -72,10 +71,10 @@ const apiSaveBookingServices =(data:any)=>{
         throw new error;
     }
 }
-const apiConfirmBookingServices =(data:any)=>{
+const apiConfirmBookingServices =async(data:any)=>{
     try{
         
-        const resp = axios.post(`${BASE_URL}/confirmBooking`,data)
+        const resp = await axios.post(`${process.env.PARMAR_URL}/confirmBooking`,data)
         return resp
     }catch(error:any)
     {
