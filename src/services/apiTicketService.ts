@@ -6,10 +6,13 @@ export const apiTicketService = ()=>{
     const apiGetAgentDetailServices =async (data:any)=>{
         try{
             const resp = axios.post(`${BASE_URL}/getAgentDetails`,data)
+            
             return resp
 
 
         }catch(error:any){
+            console.log(error);
+            
             throw new error;
         }
 
@@ -21,6 +24,8 @@ const apiGetAttractionListServices =(data:any)=>{
         return resp
     }catch(error:any)
     {
+        console.log(error);
+
         throw new error;
     }
 }
@@ -31,6 +36,8 @@ const apiGetTimeSlotListServices =(data:any)=>{
         return resp
     }catch(error:any)
     {
+        console.log(error);
+
         throw new error;
     }
 }
@@ -42,6 +49,8 @@ const apiGetPriceForTicketTypeServices =(data:any)=>{
         return resp
     }catch(error:any)
     {
+        console.log(error);
+
         throw new error;
     }
 }
@@ -52,6 +61,8 @@ const apiSaveBookingServices =(data:any)=>{
         return resp
     }catch(error:any)
     {
+        console.log(error);
+
         throw new error;
     }
 }
@@ -62,6 +73,8 @@ const apiConfirmBookingServices =(data:any)=>{
         return resp
     }catch(error:any)
     {
+        console.log(error);
+
         throw new error;
     }
 }

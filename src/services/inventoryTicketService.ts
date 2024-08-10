@@ -8,6 +8,8 @@ export const inventoryTicketService = ()=>{
             const resp = await axios.get(`${BASE_URL}/getAgentDetails`,data)
             return resp
         }catch(error:any){
+            console.log(error);
+
             throw new error;
         }
     }
@@ -17,6 +19,8 @@ export const inventoryTicketService = ()=>{
             const resp = await axios.get(`${BASE_URL}/getAttractionList`,data)
             return resp
         }catch(error:any){
+            console.log(error);
+
             throw new error;
         }
     }
@@ -26,6 +30,8 @@ export const inventoryTicketService = ()=>{
             const resp = await axios.get(`${BASE_URL}/getPriceForTicketType`,data)
             return resp
         }catch(error:any){
+            console.log(error);
+
             throw new error;
         }
     }
@@ -35,6 +41,8 @@ export const inventoryTicketService = ()=>{
             const resp = await axios.post(`${BASE_URL}/confirmBooking`,data)
             return resp
         }catch(error:any){
+            console.log(error);
+
             throw new error;
         }
     }
