@@ -1,9 +1,7 @@
 
 
 
-export const BASE_URL = process.env.NODE_ENV === 'production' 
-  ? process.env.PARMAR_URL_LIVE 
-  : process.env.PARMAR_URL_TEST;
+export const BASE_URL = process.env.PARMAR_URL
 
 // /**
 //  * Get Agent Details
