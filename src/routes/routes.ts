@@ -16,8 +16,8 @@ router.get('/ticket-type', inventoryGetPriceForTicketType);
 // --------api---------------------------
 router.post('/agent-details', apigetAgentDetails);
 router.post('/confirm-booking', apiConfirmBooking);
-router.get('/attraction-list', apiGetAttractionList);
-router.get('/ticket-type', apiGetPriceForTicketType);
+router.post('/attraction-list', apiGetAttractionList);
+router.post('/ticket-type', apiGetPriceForTicketType);
 router.post('/save-booking', apiSaveBooking);
 router.post('/time-slot-list', apiGetTimeSlotList);
 
