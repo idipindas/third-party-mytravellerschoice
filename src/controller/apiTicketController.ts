@@ -8,8 +8,8 @@ export const apiTicketController = ()=>{
         try{
             const data = req.body
             console.log('da',data)
-            // const response = await apiGetAgentDetailServices(data)
-            res.status(200).json(data)
+            const response = await apiGetAgentDetailServices(data)
+            res.status(200).json(response)
         }catch(error:any){
             res.status(500).json({message:error.message})
         }
