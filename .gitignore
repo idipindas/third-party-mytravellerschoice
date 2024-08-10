@@ -1,6 +1,6 @@
 # Node.js dependencies
 node_modules/
-
+src/
 # Output directory for compiled TypeScript files
 dist/
 build/
@@ -14,7 +14,6 @@ yarn-error.log*
 
 # Environment variables
 .env
-
 # TypeScript cache
 *.tsbuildinfo
 
