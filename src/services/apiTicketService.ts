@@ -7,7 +7,7 @@ export const apiTicketService = ()=>{
         console.log('t1',data)
 
         try{
-            const resp =await  axios.post(`${BASE_URL}/getAgentDetails`,data)
+            const resp =await  axios.post(`https://parmartours.com:8443/parmartour/Test/getAgentDetails`,data)
             console.log('t2',data,resp)
             return resp
 
