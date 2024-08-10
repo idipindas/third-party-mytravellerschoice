@@ -4,14 +4,16 @@ import { BASE_URL } from "../config/parmarConfig";
 export const apiTicketService = ()=>{
 
     const apiGetAgentDetailServices =async (data:any)=>{
+        console.log('t1',data)
+
         try{
             const resp = axios.post(`${BASE_URL}/getAgentDetails`,data)
-            
+            console.log('t2',data,resp)
             return resp
 
 
         }catch(error:any){
-            console.log(error);
+            console.log("t3",error);
             
             throw new error;
         }
