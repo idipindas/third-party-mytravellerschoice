@@ -8,8 +8,8 @@ export const apiTicketService = ()=>{
 
         try{
             const resp =await  axios.post(`https://parmartours.com:8443/parmartour/Test/getAgentDetails`,data)
-            console.log('t2',data,resp)
-            return resp
+            console.log('t2',resp?.data)
+            return resp?.data
 
 
         }catch(error:any){

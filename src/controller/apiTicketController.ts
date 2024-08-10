@@ -7,8 +7,9 @@ export const apiTicketController = ()=>{
     const apigetAgentDetails = async(req:Request,res:Response)=>{
         try{
             const data = req.body
-            console.log('da',data)
             const response = await apiGetAgentDetailServices(data)
+            console.log('da',data,response)
+
             res.status(200).json(response)
         }catch(error:any){
             res.status(500).json({message:error.message})
