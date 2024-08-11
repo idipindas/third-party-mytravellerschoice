@@ -1,6 +1,6 @@
 # Node.js dependencies
 node_modules/
-src/
+# src/
 # Output directory for compiled TypeScript files
 dist/
 build/
