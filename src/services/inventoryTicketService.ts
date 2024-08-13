@@ -3,6 +3,8 @@ import axios from "axios";
 export const inventoryTicketService = ()=>{
     const inventoryGetAgentDetailsService = async(data:any)=>{
         try{
+            console.log("================",data);
+            
 
             const resp = await axios.get(`${process.env.PARMAR_URL}/getAgentDetails`,{
                 headers: {
