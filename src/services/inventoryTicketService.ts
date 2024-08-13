@@ -4,7 +4,11 @@ export const inventoryTicketService = ()=>{
     const inventoryGetAgentDetailsService = async(data:any)=>{
         try{
 
-            const resp = await axios.get(`${process.env.PARMAR_URL}/getAgentDetails`,data)
+            const resp = await axios.get(`${process.env.PARMAR_URL}/getAgentDetails`,{
+                headers: {
+                    ...data, // Assuming `data` is an object containing your header information
+                },
+            })
             return resp
         }catch(error:any){
             console.log(error);
