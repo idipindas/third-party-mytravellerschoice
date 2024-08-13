@@ -21,7 +21,7 @@ export const apiTicketController = () => {
       if (error) {
         return res.status(400).json({
           message: "Validation failed",
-          details: error.details.map((err) => err.message),
+          details: error.details.map((err:any) => err.message),
         });
       }
 
@@ -40,7 +40,7 @@ export const apiTicketController = () => {
       if (error) {
         return res.status(400).json({
           message: "Validation failed",
-          details: error.details.map((err) => err.message),
+          details: error.details.map((err:any) => err.message),
         });
       }
 
@@ -57,7 +57,7 @@ export const apiTicketController = () => {
       if (error) {
         return res.status(400).json({
           message: "Validation failed",
-          details: error.details.map((err) => err.message),
+          details: error.details.map((err:any) => err.message),
         });
       }
 
@@ -74,7 +74,7 @@ export const apiTicketController = () => {
       if (error) {
         return res.status(400).json({
           message: "Validation failed",
-          details: error.details.map((err) => err.message),
+          details: error.details.map((err:any) => err.message),
         });
       }
 
@@ -91,7 +91,7 @@ export const apiTicketController = () => {
       if (error) {
         return res.status(400).json({
           message: "Validation failed",
-          details: error.details.map((err) => err.message),
+          details: error.details.map((err:any) => err.message),
         });
       }
 
@@ -108,7 +108,7 @@ export const apiTicketController = () => {
       if (error) {
         return res.status(400).json({
           message: "Validation failed",
-          details: error.details.map((err) => err.message),
+          details: error.details.map((err:any) => err.message),
         });
       }
 
