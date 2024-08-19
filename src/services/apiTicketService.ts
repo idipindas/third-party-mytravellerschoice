@@ -63,6 +63,7 @@ const apiSaveBookingServices =async(data:any)=>{
     try{
         
         const resp = await axios.post(`${process.env.PARMAR_URL}/saveBooking`,data)
+        console.log(resp)
         return resp
     }catch(error:any)
     {
