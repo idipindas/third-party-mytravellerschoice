@@ -8,10 +8,10 @@ const router = express.Router();
 const {inventoryConfirmBooking,inventoryGetAgentDetails,inventoryGetAttractionList,inventoryGetPriceForTicketType} = inventoryTicketController()
 const {apiConfirmBooking,apiGetAttractionList,apiGetPriceForTicketType,apiGetTimeSlotList,apiSaveBooking,apigetAgentDetails} = apiTicketController()
 // --------inventory---------------------------
-router.get('/agent-details', inventoryGetAgentDetails);
-router.post('/confirm-booking', inventoryConfirmBooking);
-router.get('/attraction-list', inventoryGetAttractionList);
-router.get('/ticket-type', inventoryGetPriceForTicketType);
+router.get('/inventory/agent-details', inventoryGetAgentDetails);
+router.post('/inventory/confirm-booking', inventoryConfirmBooking);
+router.get('/inventory/attraction-list', inventoryGetAttractionList);
+router.get('/inventory/ticket-type', inventoryGetPriceForTicketType);
 
 // --------api---------------------------
 router.post('/agent-details', apigetAgentDetails);
