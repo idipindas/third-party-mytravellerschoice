@@ -23,5 +23,7 @@ app.use("/api/v1", router);
 
 // Start the server
 app.listen(process.env.PORT, () => {
+  console.log('url ---------',process.env.PARMAR_URL);
+  
   console.log(`Server is running at http://localhost:${process.env.PORT}`);
 });
