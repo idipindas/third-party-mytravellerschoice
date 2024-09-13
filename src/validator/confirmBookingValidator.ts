@@ -14,10 +14,7 @@ export const confirmBookingValidator = Joi.object({
    
     "any.required": "attractionId is required",
   }),
-  bookingId: Joi.required().messages({
-   
-    "any.required": "bookingId is required",
-  }),
+
   ticketTypeId: Joi.required().messages({
    
     "any.required": "ticketTypeId is required",
@@ -49,9 +46,9 @@ export const confirmBookingValidator = Joi.object({
     "date.iso": "travelDate must be in ISO 8601 date format",
     "any.required": "travelDate is required",
   }),
-  // bookingId: Joi.string().required().messages({
-  //     'any.required': 'bookingId is required',
-  // }),
+  bookingId: Joi.string().required().messages({
+      'any.required': 'bookingId is required',
+  }),
   tempReference: Joi.string().max(255).required().messages({
     "string.max": "tempReference must not exceed 255 characters",
     "any.required": "tempReference is required",
