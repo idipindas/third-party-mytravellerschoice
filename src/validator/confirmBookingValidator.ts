@@ -14,6 +14,10 @@ export const confirmBookingValidator = Joi.object({
    
     "any.required": "attractionId is required",
   }),
+  bookingId: Joi.required().messages({
+   
+    "any.required": "bookingId is required",
+  }),
   ticketTypeId: Joi.required().messages({
    
     "any.required": "ticketTypeId is required",
