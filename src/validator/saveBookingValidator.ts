@@ -32,18 +32,18 @@ export const saveBookingValidator = Joi.object({
   eventId: Joi.string().required().messages({
     "any.required": "eventId is required",
   }),
-  nofAdult: Joi.number().integer().positive().required().messages({
-    "number.base": "nofAdult must be a number",
-    "number.integer": "nofAdult must be an integer",
-    "number.positive": "nofAdult must be a positive number",
-    "any.required": "nofAdult is required",
-  }),
-  nofChild: Joi.number().integer().positive().required().messages({
-    "number.base": "nofChild must be a number",
-    "number.integer": "nofChild must be an integer",
-    "number.positive": "nofChild must be a positive number",
-    "any.required": "nofChild is required",
-  }),
+  // nofAdult: Joi.number().integer().required().messages({
+  //   "number.base": "nofAdult must be a number",
+  //   "number.integer": "nofAdult must be an integer",
+  //   "number.positive": "nofAdult must be a positive number",
+  //   "any.required": "nofAdult is required",
+  // }),
+  // nofChild: Joi.number().integer().required().messages({
+  //   "number.base": "nofChild must be a number",
+  //   "number.integer": "nofChild must be an integer",
+  //   "number.positive": "nofChild must be a positive number",
+  //   "any.required": "nofChild is required",
+  // }),
   status: Joi.string().valid("0", "1").required().messages({
     "any.only": 'status must be either "0" or "1"',
     "any.required": "status is required",
