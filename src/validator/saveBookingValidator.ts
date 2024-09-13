@@ -14,16 +14,12 @@ export const saveBookingValidator = Joi.object({
     "date.iso": "bookingDate must be in ISO 8601 date format",
     "any.required": "bookingDate is required",
   }),
-  attractionId: Joi.number().integer().positive().required().messages({
-    "number.base": "attractionId must be a number",
-    "number.integer": "attractionId must be an integer",
-    "number.positive": "attractionId must be a positive number",
+  attractionId: Joi.required().messages({
+    
     "any.required": "attractionId is required",
   }),
-  ticketTypeId: Joi.number().integer().positive().required().messages({
-    "number.base": "ticketTypeId must be a number",
-    "number.integer": "ticketTypeId must be an integer",
-    "number.positive": "ticketTypeId must be a positive number",
+  ticketTypeId: Joi.required().messages({
+    
     "any.required": "ticketTypeId is required",
   }),
   eventTypeId: Joi.string().required().messages({
